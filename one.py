@@ -21,30 +21,29 @@ def convert_hundreds_to_words(hundreds_value):
 		return 'nine-hundred'
 
 def convert_tens_to_words(tens_value):
-	if tens_value) == '0':
+	if tens_value == '0':
 		return ' '
-	elif tens_value) == '1':
+	elif tens_value == '1':
 		#Need to write another function here to hand the tens. 
 		return 'one-hundred'
-	elif tens_value) == '2':
+	elif tens_value == '2':
 		return 'twenty'
-	elif tens_value) == '3':
+	elif tens_value == '3':
 		return 'thirty'
-	elif tens_value) == '4':
-		return 'four-hundred'
-	elif tens_value) == '5':
-		return 'five-hundred'
-	elif tens_value) == '6':
-		return 'six-hundred'
-	elif tens_value) == '7':
-		return 'seven-hundred'
-	elif tens_value) == '8':
-		return 'eight-hundred'
-	elif tens_value) == '9':
-		return 'nine-hundred'
+	elif tens_value == '4':
+		return 'fourty'
+	elif tens_value == '5':
+		return 'fifty'
+	elif tens_value == '6':
+		return 'sixty'
+	elif tens_value == '7':
+		return 'seventy'
+	elif tens_value == '8':
+		return 'eighty'
+	elif tens_value == '9':
+		return 'ninety'
 
 
-	
 def convert_number(number):
 	number_to_string = str(number)
 	length_of_string = len(number_to_string)
@@ -55,6 +54,8 @@ def convert_number(number):
 		hundreds_spot_to_words = convert_hundreds_to_words(hundreds_value)
 		words_list.append(hundreds_spot_to_words)
 		tens_spot_to_words = convert_tens_to_words(tens_value)
+		words_list.append(tens_spot_to_words)
+		print(tens_spot_to_words)
 
 	
 convert_number(325)

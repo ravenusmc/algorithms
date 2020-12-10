@@ -22,10 +22,10 @@ def convert_hundreds_to_words(hundreds_value):
 
 def convert_tens_to_words(tens_value):
 	if tens_value == '0':
-		return ' '
+		return 'and '
 	elif tens_value == '1':
-		#Need to write another function here to hand the tens. 
-		return 'one-hundred'
+		teens_value_check = True
+		return teens_value_check
 	elif tens_value == '2':
 		return 'twenty-'
 	elif tens_value == '3':
@@ -45,7 +45,7 @@ def convert_tens_to_words(tens_value):
 
 def convert_ones_to_words(ones_value):
 	if ones_value == '0':
-		return ' '
+		return 'and'
 	elif ones_value == '1':
 		return 'one'
 	elif ones_value == '2':
@@ -65,6 +65,12 @@ def convert_ones_to_words(ones_value):
 	elif ones_value == '9':
 		return 'nine'
 
+def convert_tens_to_words(ones_value):
+	if ones_value == '0':
+		return 'and ten'
+	elif ones_value == '1':
+		return 'and eleven'
+
 
 def convert_number(number):
 	number_to_string = str(number)
@@ -77,12 +83,17 @@ def convert_number(number):
 		hundreds_spot_to_words = convert_hundreds_to_words(hundreds_value)
 		words_list.append(hundreds_spot_to_words)
 		tens_spot_to_words = convert_tens_to_words(tens_value)
-		words_list.append(tens_spot_to_words)
-		ones_spot_to_words = convert_ones_to_words(ones_value)
-		words_list.append(ones_spot_to_words)
-		final_word = ""
-		print(final_word.join(words_list))
+		if tens_spot_to_words == True:
+			teens_word_value = get_teens_value(ones_value)
+			words_list.append(teens_word_value)
+		else:
+			words_list.append(tens_spot_to_words)
+			ones_spot_to_words = convert_ones_to_words(ones_value)
+			words_list.append(ones_spot_to_words)
+		print(words_list)
+		# final_word = ""
+		# print(final_word.join(words_list))
 
 	
-convert_number(342)
+convert_number(310)
 

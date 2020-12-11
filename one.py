@@ -65,11 +65,27 @@ def convert_ones_to_words(ones_value):
 	elif ones_value == '9':
 		return 'nine'
 
-def convert_tens_to_words(ones_value):
+def get_teens_value(ones_value):
 	if ones_value == '0':
 		return 'and ten'
 	elif ones_value == '1':
 		return 'and eleven'
+	elif ones_value == '2':
+		return 'and twelve'
+	elif ones_value == '3':
+		return 'and thirteen'
+	elif ones_value == '4':
+		return 'and fourteen'
+	elif ones_value == '5':
+		return 'and fifteen'
+	elif ones_value == '6':
+		return 'and sixteen'
+	elif ones_value == '7':
+		return 'and seventeen'
+	elif ones_value == '8':
+		return 'and eightteen'
+	elif ones_value == '9':
+		return 'and nineteen'
 
 
 def convert_number(number):
@@ -90,10 +106,9 @@ def convert_number(number):
 			words_list.append(tens_spot_to_words)
 			ones_spot_to_words = convert_ones_to_words(ones_value)
 			words_list.append(ones_spot_to_words)
-		print(words_list)
-		# final_word = ""
-		# print(final_word.join(words_list))
+		final_word = ""
+		print(final_word.join(words_list))
 
 	
-convert_number(310)
+convert_number(519)
 

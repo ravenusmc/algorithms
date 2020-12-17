@@ -11,7 +11,28 @@
 
 # URL: https://www.hackerrank.com/challenges/compare-the-triplets/problem
 
-a = [1,2,3]
-b = [4,5,6]
+# a = [5,6,7]
+# b = [3,6,10]
+
+a = [17, 28, 30]
+b = [99, 16, 8]
 
 def compareTriplets(a, b):
+	alice = 0
+	bob = 0
+	if a[0] > b[0]:
+		alice += 1
+	if a[1] > b[1]:
+		alice += 1
+	if a[2] > b[2]:
+		alice += 1
+	if a[0] < b[0]:
+		bob += 1
+	if a[1] < b[1]:
+		bob += 1
+	if a[2] < b[2]:
+		bob += 1
+	return alice, bob
+
+compareTriplets(a, b)
+	

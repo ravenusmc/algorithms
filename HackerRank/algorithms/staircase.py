@@ -9,9 +9,7 @@
 # rank: 1,429,203
 
 def staircase(n):
-	count = 0
-	while count <= n:
-		print('#').rjust(5)
-		count += 1 
+	for i in range(1,n+1):
+		print(" "*(n-i)+ "#"*i)
 
 staircase(4)
